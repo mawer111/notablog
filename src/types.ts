@@ -25,6 +25,7 @@ export interface SiteContext {
 export interface PageMetadata {
   /** No dashes. */
   id: string
+  targetPageId: string
   icon: string | undefined
   iconHTML: string
   cover: string | undefined
@@ -34,7 +35,7 @@ export interface PageMetadata {
   inMenu: boolean
   inList: boolean
   template: string
-  url: string
+  url: string 
   description: string | undefined
   descriptionPlain: string
   descriptionHTML: string
@@ -42,6 +43,8 @@ export interface PageMetadata {
   dateString: string | undefined
   createdTime: number
   lastEditedTime: number
+  targetNotionUrl: string 
+  targetBlogUrl: string 
 }
 
 export interface RenderTask {

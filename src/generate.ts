@@ -31,9 +31,10 @@ type GenerateOptions = {
 
 /**
  * Generate a blog.
+ * TODO Support link to a page
  */
 export async function generate(workDir: string, opts: GenerateOptions = {}) {
-  const { concurrency, verbose, ignoreCache } = opts
+  const { concurrency, verbose, ignoreCache } = opts  
 
   const notionAgent = createAgent({ debug: verbose })
   const cache = new Cache(path.join(workDir, 'cache'))
